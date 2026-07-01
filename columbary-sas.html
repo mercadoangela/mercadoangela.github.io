@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: building a zero-to-one Excel-based sales and reservation system to manage 2,800+ columbary niches, automate transactions, and eliminate manual errors.">
+    <title>Case Study: Columbary SAS | Angela Mercado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon-180.svg">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #F8F7F4;
+            color: #1F1F1F;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .btn-primary {
+            background-color: #007FFF;
+            color: #fff;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0059b3;
+            transform: translateY(-2px);
+        }
+        /* Structured Grid design system */
+        .kicker {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #007FFF;
+            margin-bottom: 0.75rem;
+        }
+        .grid-card {
+            background-color: #ffffff;
+            border: 1px solid #E5E5E0;
+            border-radius: 1rem;
+        }
+        .band-tint { background-color: #F8F7F4; }
+        .band-blue { background-color: #EEF4FC; }
+        .stage-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            min-width: 3rem;
+            border: 2px solid #007FFF;
+            border-radius: 9999px;
+            color: #007FFF;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .mini-nav a {
+            color: #4a4a4a;
+            white-space: nowrap;
+        }
+        .mini-nav a:hover, .mini-nav a.active {
+            color: #007FFF;
+        }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <!-- Header Navigation -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-10 py-4 px-4 md:px-8 shadow-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-semibold" style="font-family: 'Playfair Display', serif;">AM.</a>
+            <a href="index.html#portfolio" class="font-semibold text-sm tracking-wide uppercase hover:text-blue-600 transition-colors">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <!-- Mini In-Page Navigation -->
+    <nav class="mini-nav bg-white border-b border-gray-200 sticky top-[65px] z-10 py-3 px-4 md:px-8 overflow-x-auto">
+        <div class="container mx-auto flex gap-6 text-sm font-semibold tracking-wide">
+            <a href="#outcome">Outcome</a>
+            <a href="#context">Context</a>
+            <a href="#process">The Process</a>
+            <a href="#reflections">Reflections</a>
+        </div>
+    </nav>
+
+    <!-- 1. HERO TITLE -->
+    <section class="text-center bg-gray-50 py-16 md:py-24 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Columbary Sales & Reservation System</h1>
+            <p class="text-lg md:text-xl text-gray-700 font-light">Designing a "zero-to-one" reservation system to manage pre-sales for a new columbary</p>
+        </div>
+    </section>
+
+    <!-- 2. HERO IMAGE -->
+    <section class="container mx-auto px-4 md:px-8 py-16 md:py-20">
+        <div class="mb-16">
+            <img src="SJC-Home-Sheet.png" 
+                 alt="Final Dashboard of the Columbary SAS" 
+                 class="rounded-lg shadow-2xl w-full h-auto object-cover object-top"
+                 onerror="this.src='https://placehold.co/1200x800/1F1F1F/FFFFFF?text=Final+Excel+Dashboard+Mockup'">
+        </div>
+    </section>
+
+
+    <!-- Main Content Wrapper -->
+    <div class="container mx-auto px-4 md:px-8 py-16 md:py-20 max-w-5xl mx-auto">
+
+        <!-- 3. THE "WOW" (The Outcome) -->
+        <section id="outcome" class="my-12">
+            <div class="text-center mb-12">
+                <span class="kicker">Case Study — Part 01</span>
+                <h2 class="text-3xl md:text-4xl font-medium">The Outcome</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 grid-card shadow-sm p-10 md:p-16">
+                <div>
+                    <h3 class="text-2xl font-medium mb-4">Final Product</h3>
+                    <p class="text-gray-700 text-lg">I designed the columbary's first-ever digital sales system from the ground up, proactively preventing the chaos of a high-stakes, manual process and its costly errors. I delivered a single, automated Excel application where the Columbary Sales Assistant (CSA) can now manage thousands of niches, process complex financial transactions like swaps and cancellations, and generate all legal documents in a fraction of the time all from one error-proof, guided interface.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-medium mb-4">Key Impact</h3>
+                    <ul class="text-gray-700 text-lg list-disc list-inside space-y-2">
+                        <li>Established the first "single source of truth" for all units before the first sale</li>
+                        <li>Proactively eliminated 100% of potential data errors from double-booking or mismanaged payments</li>
+                        <li>Delivered a system that gives the client total confidence to launch their sales campaign</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECT CONTEXT -->
+        <section id="context" class="my-24">
+            <span class="kicker block text-center">Case Study — Part 02</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Details -->
+                <div class="md:col-span-1">
+                    <h3 class="text-2xl font-medium border-b-2 border-yellow-400 pb-2 mb-4">Project Details</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-user-tie w-4 text-blue-600 mt-1"></i>
+                            <span><strong>Role:</strong> Systems Designer & Developer</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-clock w-4 text-blue-600 mt-1"></i>
+                            <span><strong>Timeline:</strong> 5 Months</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-circle-info w-4 text-blue-600 mt-1"></i>
+                            <span><strong>Status:</strong>
+                                <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded-full ml-1">Completed & Soon to be Implemented</span>
+                            </span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-toolbox w-4 text-blue-600 mt-1"></i>
+                            <span><strong>Tools:</strong> Microsoft Excel (VBA & Macros), Microsoft Word</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- The Problem & Goal -->
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-medium mb-4">The Problem</h3>
+                    <p class="text-gray-700 mb-6">The user, a Columbary Sales Assistant (CSA), is responsible for managing 2,800+ niches, tracking a mix of reservation fees and post-dated checks, and manually processing complex financial swaps.</p>
+                    <ul class="text-gray-700 text-lg list-disc list-inside space-y-2">
+                        <li><strong>Cognitive Load:</strong> The CSA would need to remember complex business rules (like swap limits, cancellation policies, and payment schedules) for every single transaction.</li>
+                        <li><strong>High Risk of Error:</strong> A single mistake in a calculation or manual data entry could lead to significant financial or legal issues.</li>
+                        <li><strong>High Time Cost:</strong> Manually cross-referencing multiple spreadsheets, performing calculations, and generating Word documents for every booking or swap was incredibly time-consuming.</li>
+                    </ul>
+                    <br>
+                    <h3 class="text-2xl font-medium mb-4">The Goal</h3>
+                    <p class="text-gray-700">My goal was to <strong>design a system that guides the user, prevents all possible errors, and automates every repetitive task.</strong> I had to design and build a reservation system from scratch, and create a solution that was 100% reliable, intuitive for the CSA, and built within their existing tool: Microsoft Excel.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 5. THE "HOW" (The Process) -->
+        <section id="process" class="my-24 band-tint rounded-2xl p-6 md:p-12 -mx-4 md:-mx-8">
+            <div class="text-center mb-16">
+                <span class="kicker">Case Study — Part 03</span>
+                <h2 class="text-3xl md:text-4xl font-medium">The Process</h2>
+            </div>
+            
+            <!-- Stage 1: Understand (Defining the Process) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="order-2 md:order-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="stage-number">1</div>
+                        <h3 class="text-3xl font-medium">Architecting the Solution</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">The main challenge was translating a high-stakes sales process with complex, state-dependent business rules into a simple system. I designed a relational-style model within Excel, centered on two master databases: one for tracking the physical (Niches Database) and another for all checks and financial transactions (Checks Database). This two-database structure, linked by a unique ID, became the "brain" that enabled all the subsequent automation and logic.</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="databases.png" alt="Process flow diagram for the sales system" class="rounded-lg shadow-xl w-full h-auto object-cover lightbox-trigger cursor-pointer"
+                    onerror="this.src='https://placehold.co/800x600/89CFF0/FFFFFF?text=Sales+Process+Flowchart'">
+                </div>
+            </div>
+
+            <!-- Stage 2: Design (Excel as a UX Tool) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                   <img src="sjc-cancel-form.png" alt="Screenshots of Excel design features" class="rounded-lg shadow-xl w-full h-auto object-cover lightbox-trigger cursor-pointer"
+                   onerror="this.src='https://placehold.co/800x600/1F1F1F/FFFFFF?text=Excel+UX+Features'">
+                </div>
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="stage-number">2</div>
+                        <h3 class="text-3xl font-medium">Designing the Guided Experience</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">With the logic defined, my design mindset was <strong>proactive guidance</strong> to prevent errors before they could happen. I designed smart UserForms that act as "guided wizards," such as the cancellation form that instantly queries the database, displays the niche's financial status, and shows the correct policy (e.g., "Status: Paid" and "Policy: No refund...") before the user can even click 'OK'. This proactive step turns complex policy into a simple, guided action.</p>
+                    
+                </div>
+            </div>
+
+            <!-- Stage 3: Build & Deliver -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+                 <div class="order-2 md:order-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="stage-number">3</div>
+                        <h3 class="text-3xl font-medium">Iterative Validation & Automation</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">I tested each feature directly with the CSA to find pain points, which led to key design iterations. For example, the CSA found replacing bounced checks tedious, so I redesigned the Replacement Check form from a blank text box into a "smart" dropdown that auto-fills all known data (Amount, Date, Bank), reducing data entry for that task by 75%. Finally, I automated the full loop, creating macros that generate all legal documents and a flexible End-of-Day task that empowers the user with backup and report options.</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="replacement-check.png" alt="Final SAS dashboard screenshot" class="rounded-lg shadow-xl w-full h-auto object-cover lightbox-trigger cursor-pointer"
+                    onerror="this.src='https://placehold.co/800x600/89CFF0/FFFFFF?text=Final+Dashboard+Screenshot'">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 6. REFLECTIONS (Challenges & Takeaways) -->
+        <section id="reflections" class="my-24 max-w-4xl mx-auto">
+            <div class="grid-card shadow-sm p-10 md:p-16 border-t-4 border-yellow-400">
+                <div class="text-center mb-12">
+                    <span class="kicker">Case Study — Part 04</span>
+                    <h2 class="text-4xl font-medium">Reflections & Learnings</h2>
+                </div>
+                
+                <h3 class="text-2xl font-medium mb-4">Key Challenge</h3>
+                <p class="text-gray-700 mb-8 text-lg">The biggest challenge wasn't just <i>solving</i> a problem, but <i>anticipating</i> future problems. Designing a system from scratch with no prior basis meant I had to think through every possible 'what if' scenario (e.g., 'What if a client cancels?' or 'What if they change payment plans?'). This required meticulous planning and a truly flexible architecture.</p>
+
+                <h3 class="text-2xl font-medium mb-4">Key Takeaways</h3>
+                <ol class="text-gray-700 list-decimal list-inside space-y-3 text-lg">
+                    <li><strong>Good user experience can be felt no matter what medium is used.</strong> This project proved that UX principles like clarity, error prevention, and efficiency are just as important in an Excel dashboard as they are in a mobile app.</li>
+                    <li><strong>Effectiveness, not aesthetics, can sometimes be the only factor needed in a project.</strong> The client didn't need a beautiful, expensive, cloud-based app. They needed a reliable, offline system in a tool they already understood. Designing within this constraint was the key to the project's success.</li>
+                    <li><strong>AI is a tool, not a replacement of your work.</strong> It was my first time using AI to help me code the Macros. While it was indeed simpler and time-saving for me, I found that it could also make errors. Thanks to my prior experience with VBA and Macros, I knew how to check and even revise its work.</li>
+                </ol>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- CTA Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200">
+        <div class="container mx-auto py-16 px-4 md:px-8 text-center">
+            <h2 class="text-3xl font-medium mb-4">Let's Work Together</h2>
+            <p class="max-w-xl mx-auto mb-8 text-gray-700">
+                Have a project in mind or want to learn more? I'd love to connect.
+             </p>
+             <a href="mailto:angela.mercado.ux@gmail.com" class="inline-block btn-primary text-lg font-bold py-4 px-10 rounded-lg shadow-lg">Get In Touch</a>
+        </div>
+    </footer>
+
+    
+    <!-- LIGHTBOX MODAL (Add this before your </body> tag) -->
+    <div id="lightbox" class="hidden fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-pointer">
+        <!-- Close Button -->
+        <button id="lightbox-close" class="absolute top-4 right-4 text-white hover:text-gray-300 z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <!-- Full-size Image Container -->
+        <img id="lightbox-image" src="" alt="Full-size view" class="max-w-full max-h-full rounded-lg shadow-xl">
+    </div>
+
+
+    <!-- SCRIPT for Lightbox -->
+    <script>
+        // This script is now just for the lightbox, since this page has no carousel.
+        (function() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            if (!lightbox || !lightboxImage || !lightboxClose) {
+                console.error("Lightbox elements not found.");
+                return;
+            }
+
+            // Find all images you've marked with "lightbox-trigger"
+            const triggers = document.querySelectorAll('.lightbox-trigger');
+
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const imgSrc = trigger.getAttribute('src'); 
+                    if (imgSrc) {
+                        lightboxImage.setAttribute('src', imgSrc);
+                        lightbox.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // --- Lightbox Close Listeners ---
+            lightboxClose.addEventListener('click', () => lightbox.classList.add('hidden'));
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) lightbox.classList.add('hidden');
+            });
+        })();
+    </script>
+
+</body>
+</html>

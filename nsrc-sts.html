@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: designing a real-time specimen tracking system to help track over 4,000 newborn blood samples daily across Philippine hospitals and labs.">
+    <title>Case Study: NSRC Specimen Tracking | Angela Mercado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon-180.svg">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #F8F7F4;
+            color: #1F1F1F;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .btn-primary {
+            background-color: #007FFF;
+            color: #fff;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0059b3;
+            transform: translateY(-2px);
+        }
+        /* Style for the stats */
+        .stat-card {
+            background-color: #ffffff;
+            border-left: 5px solid #007FFF; /* A nice accent color */
+        }
+        /* This ensures the carousel buttons are on top of the image */
+        .carousel-prev, .carousel-next, .carousel-dots {
+            z-index: 10;
+        }
+        /* Structured Grid design system */
+        .kicker {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #007FFF;
+            margin-bottom: 0.75rem;
+        }
+        .grid-card {
+            background-color: #ffffff;
+            border: 1px solid #E5E5E0;
+            border-radius: 1rem;
+        }
+        .band-tint { background-color: #F8F7F4; }
+        .band-blue { background-color: #EEF4FC; }
+        .stage-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            min-width: 3rem;
+            border: 2px solid #007FFF;
+            border-radius: 9999px;
+            color: #007FFF;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .mini-nav a {
+            color: #4a4a4a;
+            white-space: nowrap;
+        }
+        .mini-nav a:hover, .mini-nav a.active {
+            color: #007FFF;
+        }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <!-- Header Navigation -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-10 py-4 px-4 md:px-8 shadow-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-semibold" style="font-family: 'Playfair Display', serif;">AM.</a>
+            <a href="index.html#portfolio" class="font-semibold text-sm tracking-wide uppercase hover:text-blue-600 transition-colors">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <!-- Mini In-Page Navigation -->
+    <nav class="mini-nav bg-white border-b border-gray-200 sticky top-[65px] z-10 py-3 px-4 md:px-8 overflow-x-auto">
+        <div class="container mx-auto flex gap-6 text-sm font-semibold tracking-wide">
+            <a href="#outcome">Outcome</a>
+            <a href="#context">Context</a>
+            <a href="#process">The Process</a>
+            <a href="#status">Status & Next Steps</a>
+            <a href="#reflections">Reflections</a>
+        </div>
+    </nav>
+
+    <!-- 1. HERO TITLE -->
+    <section class="text-center bg-gray-50 py-16 md:py-24 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">NSRC Specimen Tracking System</h1>
+            <p class="text-lg md:text-xl text-gray-700 font-light">Designing a System to Track 4,000+ Newborn Blood Samples Daily</p>
+        </div>
+    </section>
+
+    <!-- 2. THE "WOW" (The Solution & Projected Impact) -->
+    <section id="outcome" class="container mx-auto px-4 md:px-8 py-16 md:py-20">
+        <div class="text-center mb-8">
+            <span class="kicker">Case Study — Part 01</span>
+        </div>
+
+        <!-- VISUAL WOW: The Final Product Solution -->
+        <!-- This is the hover-effect hero image we built -->
+        <div class="group relative mb-16 rounded-lg shadow-2xl overflow-hidden cursor-pointer">
+            <!-- IMAGE 2: THE REVEAL (Bottom Layer) - Can be a GIF -->
+            <img src="PD-NSRC-STS-NSF.png" 
+                 alt="NSRC Tracking System - Interaction View" 
+                 class="absolute inset-0 w-full h-full object-cover object-top"
+                 onerror="this.src='https://placehold.co/1200x800/007FFF/FFFFFF?text=Hover+State+(GIF?)'">
+
+            <!-- IMAGE 1: THE DEFAULT (Top Layer) -->
+            <img src="PD-NSRC-STS-NSC.png" 
+                 alt="NSRC Tracking System - Default View" 
+                 class="relative z-10 w-full h-auto object-cover object-top transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+                 onerror="this.src='https://placehold.co/1200x800/89CFF0/FFFFFF?text=Default+Hero+Image'">
+        </div>
+
+
+        <!-- IMPACT WOW: Projected Results -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            
+            <!-- Key Projections -->
+            <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="stat-card p-6 rounded-lg shadow-lg">
+                    <h3 class="text-4xl font-bold text-blue-600 mb-2">75%</h3>
+                    <p class="text-lg font-medium text-gray-800">Projected Reduction in Errors</p>
+                    <p class="text-gray-600">Designed to reduce manual sample tracking errors.</p>
+                </div>
+                <div class="stat-card p-6 rounded-lg shadow-lg">
+                    <h3 class="text-4xl font-bold text-blue-600 mb-2">5+</h3>
+                    <p class="text-lg font-medium text-gray-800">Projected Hours Saved Weekly</p>
+                    <p class="text-gray-600">Designed to cut administrative time for hospital staff.</p>
+                </div>
+            </div>
+
+            <!-- Projected Impact Summary -->
+            <div class="md:col-span-1">
+                <h3 class="text-2xl font-medium mb-4">Projected Impact</h3>
+                <p class="text-lg text-gray-700">
+                    By digitizing the manual workflow, the solution is designed to provide real-time visibility, reduce data-entry errors, and significantly speed up lab processing times.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Wrapper -->
+<div class="container mx-auto px-4 md:px-8 py-16 md:py-20 max-w-5xl mx-auto">
+
+        <!-- 3. PROJECT CONTEXT (The Setup) -->
+        <section id="context" class="my-12">
+            <span class="kicker block text-center">Case Study — Part 02</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Details -->
+                <div class="md:col-span-1">
+    <h3 class="text-2xl font-medium border-b-2 border-yellow-400 pb-2 mb-4">Project Details</h3>
+    <ul class="space-y-3 text-gray-700">
+        <li class="flex items-start gap-3">
+            <i class="fas fa-user-tie w-4 text-blue-600 mt-1"></i>
+            <span><strong>Role:</strong> Product Designer</span>
+        </li>
+        <li class="flex items-start gap-3">
+            <i class="fas fa-clock w-4 text-blue-600 mt-1"></i>
+            <span><strong>Timeline:</strong> 2 Years (Ongoing Project Engagement)</span>
+        </li>
+        <li class="flex items-start gap-3">
+            <i class="fas fa-circle-info w-4 text-blue-600 mt-1"></i>
+            <span><strong>Status:</strong>
+                <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-0.5 rounded-full ml-1">In Development</span>
+            </span>
+        </li>
+        <li class="flex items-start gap-3">
+            <i class="fas fa-toolbox w-4 text-blue-600 mt-1"></i>
+            <span><strong>Tools:</strong> Figma, Jira, Laravel Nova</span>
+        </li>
+        <li class="flex items-start gap-3">
+            <i class="fas fa-users w-4 text-blue-600 mt-1"></i>
+            <span><strong>Team:</strong> 3 Developers, 1 Project Manager, Stakeholders</span>
+        </li>
+    </ul>
+</div>
+                <!-- The Problem & Goal -->
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-medium mb-4">The Problem</h3>
+                    <p class="text-gray-700 mb-6">Every day, almost 4000 babies are born in the Philippines, and their blood samples are taken to test for disorders. Currently, the entire process is manual with no way to digitally track the transport of blood samples from hospitals to the centers that test them. This risks delays in diagnosis and treatment.</p>
+                    
+                    <h3 class="text-2xl font-medium mb-4">The Goal</h3>
+                    <p class="text-gray-700">My goal was to design a system that works alongside the current manual processes. This platform would provide real-time digital tracking of all blood samples, giving stakeholders clear visibility into their stage and location at all times.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. THE "HOW" (The Process) -->
+        <section id="process" class="my-24 band-tint rounded-2xl p-6 md:p-12 -mx-4 md:-mx-8">
+            <div class="text-center mb-16">
+                <span class="kicker">Case Study — Part 03</span>
+                <h2 class="text-4xl font-medium">The "How": My Design Process</h2>
+            </div>
+            
+            <!-- Stage 1: Understand (Research & Discovery) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="order-2 md:order-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="stage-number">1</div>
+                        <h3 class="text-3xl font-medium">Understand (Research & Discovery)</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">I initiated months of in-depth stakeholder discussions to get the full detailed scope. Direct access to clinical staff was limited due to their high-stakes work, so I conducted a Subject Matter Expert (SME) interview with an experienced doctor. This was critical, revealing the platform must be mobile-first for nurses on duty.</p>
+                    <p class="text-gray-700 font-medium"><strong>Key Insight:</strong> The true goal was not to replace the manual system, but to add a low-friction tracking layer on top of it. This reframed my core design principle: 'Design for the <strong>least</strong> friction with the current process.'</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="Specimen-Tracking-NSC-Flow.png" 
+                        alt="Specimen Tracking Flow" 
+                        class="rounded-lg shadow-xl w-full h-auto object-cover lightbox-trigger cursor-pointer">
+                </div>
+            </div>
+
+            <!-- Stage 2: Explore (Ideation & Wireframing) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                
+                <!-- NEW CAROUSEL GOES HERE -->
+                <div id="wireframe-carousel" class="relative rounded-lg shadow-xl overflow-hidden aspect-[4/3]">
+                    <!-- SLIDER TRACK -->
+                    <div class="carousel-track flex h-full transition-transform duration-500 ease-in-out">
+                        
+                        <!-- SLIDE 1 -->
+                        <div class="carousel-slide flex-shrink-0 h-full cursor-pointer">
+                            <img src="STS-Center-Wireframes.png" 
+                                 alt="Low-fidelity wireframes for the dashboard" 
+                                 class="w-full h-full object-contain"
+                                 onerror="this.src='https://placehold.co/800x600/1F1F1F/FFFFFF?text=Wireframe+Image+1'">
+                        </div>
+                        
+                        <!-- SLIDE 2 -->
+                        <div class="carousel-slide flex-shrink-0 h-full cursor-pointer">
+                            <img src="STS-Facilities-Wireframes.png" 
+                                 alt="Early sketches for the mobile app" 
+                                 class="w-full h-full object-contain"
+                                 onerror="this.src='https://placehold.co/800x400/89CFF0/1F1F1F?text=Wireframe+Image+2'">
+                        </div>
+                
+                    </div>
+                
+                    <!-- PREV/NEXT BUTTONS -->
+                    <button class="carousel-prev absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full shadow-lg hover:bg-black/60 transition-colors focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button class="carousel-next absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full shadow-lg hover:bg-black/60 transition-colors focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                
+                    <!-- DOTS NAVIGATION -->
+                    <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                        <!-- Dots will be added here by JavaScript -->
+                    </div>
+                </div>
+                <!-- END CAROUSEL -->
+
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="stage-number">2</div>
+                        <h3 class="text-3xl font-medium">Explore (Ideation & Wireframing)</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">I translated the complex manual processes into digital user flows. I had to navigate significant technical constraints from the Laravel Nova framework, which required me to pivot on several designs. This forced me to be creative, finding UX solutions that worked within the framework's limitations.</p>
+                </div>
+            </div>
+            
+            <!-- VISUAL WOW: Before & After -->
+            <div class="my-24 text-center">
+                <h3 class="text-3xl font-medium mb-8">Key Iteration: Batch Processing</h3>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">My initial design showed all samples in one long list. My client looked overwhelmed and explained that they work in "batches." I redesigned the flow to use a "batch" model, which tested much better.</p>
+                <img src="batch-processing.png" alt="Before and After comparison of the batching process" class="rounded-lg shadow-xl w-full h-auto object-cover lightbox-trigger cursor-pointer">
+            </div>
+
+            <!-- Stage 3: Validate (Prototyping & Testing) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+                 <div class="order-2 md:order-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="stage-number">3</div>
+                        <h3 class="text-3xl font-medium">Validate (Prototyping & Handoff)</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">I prototyped the designs and demoed them directly to the client for validation. I was also responsible for QA testing during development to ensure the system functioned as designed, working in constant collaboration with the developers for a smooth handoff.</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="prototype.png" alt="High-fidelity design visuals" class="rounded-lg shadow-xl w-full h-auto object-cover lightbox-trigger cursor-pointer">
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CURRENT STATUS & NEXT STEPS -->
+        <section id="status" class="my-24">
+            <div class="max-w-3xl mx-auto grid-card shadow-sm p-10 md:p-16 border-t-4 border-blue-600">
+                <div class="text-center mb-12">
+                    <span class="kicker">Case Study — Part 04</span>
+                    <h2 class="text-4xl font-medium">Current Status & Next Steps</h2>
+                </div>
+                <p class="text-gray-700 text-lg mb-6">
+                    This system is part of a multi-phase Digital Transformation project. The final design has been completed and the platform has been tested multiple times, but the rest of the project is still in progress as of Jan 2026.
+                </p>
+                <h3 class="text-2xl font-medium mb-4">Next Steps</h3>
+                <p class="text-gray-700 mb-4">Once the system enters beta testing, my plan is to:</p>
+                <ul class="text-gray-700 list-disc list-inside space-y-3 text-lg">
+                    <li>Partner with the product manager to conduct usability testing with a pilot group of NSC and hospital staff.</li>
+                    <li>Define and measure baseline metrics (e.g., task completion time, error rate).</li>
+                    <li>Synthesize all real-world feedback to create a roadmap for a possible V2 design cycle.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 6. REFLECTIONS (Challenges & Takeaways) -->
+        <section id="reflections" class="my-24 max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="kicker">Case Study — Part 05</span>
+                <h2 class="text-4xl font-medium">Reflections & Learnings</h2>
+            </div>
+            
+            <h3 class="text-2xl font-medium mb-4">Key Challenges</h3>
+            <ul class="text-gray-700 list-disc list-inside space-y-3 text-lg">
+                <li><strong>Designing with limited user access:</strong> My biggest challenge was designing for users I couldn't interview. I had to rely on stakeholder interviews and SME insights, which required me to be meticulous in confirming assumptions.</li>
+                <li><strong>Designing around technical constraints:</strong> Working within the limits of the Laravel Nova framework was a constant creative challenge. I had to find a balance between the 'perfect' UX flow and the technically feasible one.</li>
+            </ul>
+
+            <!-- This is the fixed ordered list -->
+            <h3 class="text-2xl font-medium mb-4 mt-8">Key Takeaways</h3>
+            <ol class="text-gray-700 list-decimal list-inside space-y-3 text-lg">
+                <li><strong>Be a firm, yet compassionate, advocate for the user.</strong> One regret is not explaining the importance of user testing more forcefully at the start. I've learned that being a firm advocate for the user should be a main part of the job, and I will carry this firmness into my next project.</li>
+                <li><strong>Designing with a framework has pros and cons.</strong> It simplified UI decisions, giving me more time to focus on the UX. On the other hand, it sacrificed some functionality. This project proved that constraints don't have to kill creativity; they just require you to be <strong>more</strong> creative with the UX.</li>
+                <li><strong>Constant communication with developers is a non-negotiable.</strong> This system was complex and mirrored no other platform. By creating an environment where the developers felt comfortable raising concerns, we ensured every detail was implemented correctly, both visually and functionally.</li>
+            </ol>
+        </section>
+
+    </div>
+
+    <!-- CTA Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200">
+        <div class="container mx-auto py-16 px-4 md:px-8 text-center">
+            <h2 class="text-3xl font-medium mb-4">Let's Work Together</h2>
+            <p class="max-w-xl mx-auto mb-8 text-gray-700">
+                Have a project in mind or want to learn more? I'd love to connect.
+             </p>
+             <a href="mailto:angela.mercado.ux@gmail.com" class="inline-block btn-primary text-lg font-bold py-4 px-10 rounded-lg shadow-lg">Get In Touch</a>
+        </div>
+    </footer>
+
+    
+    <!-- LIGHTBOX MODAL (Add this before your </body> tag) -->
+    <div id="lightbox" class="hidden fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-pointer">
+        <!-- Close Button -->
+        <button id="lightbox-close" class="absolute top-4 right-4 text-white hover:text-gray-300 z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        
+        <!-- Full-size Image Container -->
+        <img id="lightbox-image" src="" alt="Full-size view" class="max-w-full max-h-full rounded-lg shadow-xl">
+    </div>
+
+
+    <!-- SCRIPT for Carousel and Lightbox -->
+    <script>
+        (function() {
+            // --- Carousel Logic ---
+            const carousel = document.getElementById('wireframe-carousel');
+            if (!carousel) return; // Exit if this carousel isn't on the page
+
+            const track = carousel.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = carousel.querySelector('.carousel-next');
+            const prevButton = carousel.querySelector('.carousel-prev');
+            const dotsContainer = carousel.querySelector('.carousel-dots');
+            
+            if (slides.length === 0) return; // Exit if there are no slides
+
+            let currentIndex = 0;
+            let slideWidth = 0;
+
+            // --- Lightbox Logic ---
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            if (!lightbox || !lightboxImage || !lightboxClose) {
+                console.error("Lightbox elements not found.");
+                return;
+            }
+
+            // --- Create dots ---
+            const dots = [];
+            dotsContainer.innerHTML = ''; // Clear any existing dots
+            slides.forEach((slide, index) => {
+                const button = document.createElement('button');
+                button.classList.add('carousel-dot', 'w-3', 'h-3', 'rounded-full', 'bg-white/50', 'transition-colors');
+                if (index === 0) button.classList.add('bg-white');
+                
+                button.addEventListener('click', () => {
+                    moveToSlide(index);
+                });
+                dotsContainer.appendChild(button);
+                dots.push(button);
+
+                // Add Lightbox Click Listener
+                const img = slide.querySelector('img');
+                if (img) {
+                    // We use the image's 'src' for the lightbox
+                    const imgSrc = img.getAttribute('src');
+                    // Add the click listener to the *slide* not the image
+                    slide.addEventListener('click', () => {
+                        lightboxImage.setAttribute('src', imgSrc);
+                        lightbox.classList.remove('hidden');
+                    });
+                }
+            });
+
+            // --- Lightbox Close Listeners ---
+            lightboxClose.addEventListener('click', () => lightbox.classList.add('hidden'));
+            lightbox.addEventListener('click', (e) => {
+                // Close if clicking on the backdrop
+                if (e.target === lightbox) lightbox.classList.add('hidden');
+            });
+
+            // --- Move to slide function ---
+            const moveToSlide = (index) => {
+                if (slideWidth === 0) {
+                    console.warn("Slide width not set, re-calculating.");
+                    setCarouselSizes();
+                    if (slideWidth === 0) return;
+                }
+                
+                track.style.transform = `translateX(-${slideWidth * index}px)`;
+                
+                dots.forEach(dot => dot.classList.remove('bg-white'));
+                dots[index].classList.add('bg-white');
+                
+                currentIndex = index;
+
+                prevButton.style.display = (index === 0) ? 'none' : 'block';
+                nextButton.style.display = (index === slides.length - 1) ? 'none' : 'block';
+            };
+
+            // --- Function to set sizes ---
+            const setCarouselSizes = () => {
+                // Get width from the stable container
+                slideWidth = carousel.getBoundingClientRect().width;
+                if (slideWidth === 0) return;
+
+                // Set total width of the track
+                track.style.width = `${slideWidth * slides.length}px`;
+
+                // Set width of each slide
+                slides.forEach(slide => {
+                    slide.style.width = `${slideWidth}px`;
+                });
+                
+                // Go to the current slide to apply new transform
+                track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+            };
+
+            // --- Event Listeners ---
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < slides.length - 1) moveToSlide(currentIndex + 1);
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) moveToSlide(currentIndex - 1);
+            });
+
+            // --- Initial setup ---
+            // Use DOMContentLoaded for the first run
+            document.addEventListener('DOMContentLoaded', setCarouselSizes);
+            // Use window.resize to handle orientation changes or window resizing
+            window.addEventListener('resize', setCarouselSizes);
+
+        })();
+        // --- Additional Lightbox Triggers ---
+        // This function will find all elements with the class 'lightbox-trigger'
+        // and make them open the lightbox when clicked.
+        (function() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+
+            if (!lightbox || !lightboxImage) {
+                console.error("Lightbox elements not found for additional triggers.");
+                return;
+            }
+
+            const triggers = document.querySelectorAll('.lightbox-trigger');
+
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const imgSrc = trigger.getAttribute('src'); // Get the image source
+                    if (imgSrc) {
+                        lightboxImage.setAttribute('src', imgSrc);
+                        lightbox.classList.remove('hidden');
+                    }
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angela Mercado is a Product & UX Designer with a background in entrepreneurship, specializing in user-centered design for healthcare, sales systems, and ed-tech products.">
+    <title>Angela Mercado | Product & UX Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon-180.svg">
+    <style>
+        /* Custom CSS to apply the fonts and add some extra flair */
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #F8F7F4; /* Soft, off-white background */
+            color: #1F1F1F;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* A subtle animation for elements to fade in on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Custom underline effect for links */
+        .link-underline {
+            position: relative;
+            text-decoration: none;
+        }
+        .link-underline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #FFB700; /* Accent Color */
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .link-underline:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .btn-primary {
+            background-color: #007FFF; /* Primary Color */
+            color: #fff;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0059b3; /* Darker Primary */
+            transform: translateY(-2px);
+        }
+        .portfolio-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .portfolio-overlay {
+            background: rgba(0,0,0,0.6);
+            transition: opacity 0.3s ease;
+        }
+        /* Structured Grid design system */
+        .kicker {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #007FFF;
+            margin-bottom: 0.75rem;
+        }
+        .band-card {
+            background-color: #ffffff;
+            border: 1px solid #E5E5E0;
+            border-radius: 1rem;
+        }
+        .band-tint {
+            background-color: #EEF4FC;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <!-- Header Navigation -->
+    <header class="bg-transparent absolute top-0 left-0 right-0 z-10 py-6 px-4 md:px-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-semibold" style="font-family: 'Playfair Display', serif;">AM.</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="link-underline">About</a>
+                <a href="#portfolio" class="link-underline">Portfolio</a>
+                <a href="#contact" class="link-underline">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-lg shadow-lg">
+            <a href="#about" class="block text-center py-3 px-4">About</a>
+            <a href="#portfolio" class="block text-center py-3 px-4">Portfolio</a>
+            <a href="#contact" class="block text-center py-3 px-4">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url(hero-background.png)">
+        <div class="bg-white/70 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-lg max-w-3xl mx-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4" style="color: #1F1F1F;">Angela Mercado</h1>
+            <p class="text-lg md:text-xl font-light" style="color: #4a4a4a;">Crafting User-Centered Products & Designs</p>
+        </div>
+    </section>
+
+    <!-- Main Content Wrapper -->
+    <div class="container mx-auto px-4 md:px-8 py-20">
+
+        <!-- About Section -->
+        <section id="about" class="my-16 fade-in-section band-card p-8 md:p-14 shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-1 relative group w-full h-[500px]">
+                    <!-- The second image (visible on hover) -->
+                    <img src="Angela_Pancakes.jpg" alt="Angela Mercado with pancakes!" class="absolute inset-0 rounded-lg shadow-xl w-full h-full object-cover">
+                    <!-- Your main image (visible by default) -->
+                    <img src="Angela_Purple.jpg" alt="Portrait of Angela Mercado" class="absolute inset-0 rounded-lg shadow-xl w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-100 group-hover:opacity-0">
+                </div>
+                <div class="md:col-span-2">
+                    <span class="kicker">01 — Who I Am</span>
+                    <h2 class="text-4xl font-medium mb-6">About Me</h2>
+                    <p class="mb-4 text-gray-700">
+                        Hi! Angela here 🤓 I’m a former food entrepreneur and startup founder that’s looking to start a career in Product Design. My journey has been driven by a passion for creating delightful experiences for people, and now I'm channeling that same energy into the digital world.
+                    </p>
+                    <p class="mb-6 text-gray-700">
+                        My background in building a business from the ground up has given me a unique perspective on the entire product lifecycle. I thrive on solving complex problems and believe that the best products are born from deep empathy and a relentless focus on the user. I'm excited to bring my skills in entrepreneurship, problem-solving, and design to a team that's building meaningful and intuitive digital products.
+                    </p>
+                    <a href="#contact" class="inline-block btn-primary font-bold py-3 px-8 rounded-lg shadow-md">Let's Connect</a>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="my-24 fade-in-section">
+    <div class="text-center mb-12">
+        <span class="kicker">02 — Selected Work</span>
+        <h2 class="text-4xl font-medium">My Work</h2>
+    </div>
+
+    <!-- <h3 class="text-3xl font-medium text-center mb-10">UX & Product Design</h3> -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+
+        <a href="nsrc-sts.html" class="block portfolio-card bg-white rounded-lg shadow-lg overflow-hidden group">
+            <div class="relative">
+                <span class="absolute top-3 left-3 z-10 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full tracking-wide">UX DESIGN</span>
+                <img src="NBS-Sample-Collection.png" alt="NSRC Specimen Tracking System" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center portfolio-overlay">
+                    <div class="text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-2xl" style="font-family: 'Playfair Display', serif;">How do we track the blood samples of almost 4000 babies daily?</h3>
+                        <p class="text-sm mt-2">NSRC Specimen Tracking System</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="columbary-sas.html" class="block portfolio-card bg-white rounded-lg shadow-lg overflow-hidden group">
+             <div class="relative">
+                <span class="absolute top-3 left-3 z-10 bg-gray-800 text-white text-xs font-semibold px-3 py-1 rounded-full tracking-wide">PRODUCT DESIGN</span>
+                <img src="prayer.jpg" alt="SJC Admin System" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center portfolio-overlay">
+                     <div class="text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-2xl" style="font-family: 'Playfair Display', serif;">How do we organize the reservation of over 3000 columbary niches?</h3>
+                        <p class="text-sm mt-2">Columbary Sales Administrative System</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="akads.html" class="block portfolio-card bg-white rounded-lg shadow-lg overflow-hidden group">
+            <div class="relative">
+                <span class="absolute top-3 left-3 z-10 bg-yellow-500 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full tracking-wide">ENTREPRENEURSHIP</span>
+                <img src="akads-standard-colored-1.png" alt="Akads PH Startup" class="h-64 object-cover mx-auto block">
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center portfolio-overlay">
+                     <div class="text-white text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-2xl" style="font-family: 'Playfair Display', serif;">How do we validate and scale a two-sided marketplace from scratch?</h3>
+                        <p class="text-sm mt-2">Co-Founder, Akads PH</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    
+</section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="my-16 text-center fade-in-section band-tint p-8 md:p-16">
+             <span class="kicker">03 — Get In Touch</span>
+             <h2 class="text-4xl font-medium mb-4">Let's Work Together</h2>
+             <p class="max-w-xl mx-auto mb-8 text-gray-700">
+                I'm currently seeking new opportunities in Product and UX Design. If you're looking for a passionate designer with a unique entrepreneurial perspective, I'd love to chat!
+             </p>
+             <a href="mailto:angela.mercado.ux@gmail.com" class="inline-block btn-primary text-lg font-bold py-4 px-10 rounded-lg shadow-lg">angela.mercado.ux@gmail.com</a>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200">
+        <div class="container mx-auto py-6 px-4 md:px-8 text-center text-gray-600">
+            <p>&copy; 2026 Angela Mercado. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Designed with ❤️ and a dash of code.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu on click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // JavaScript for fade-in animations on scroll
+        const faders = document.querySelectorAll('.fade-in-section');
+        const appearOptions = {
+            threshold: 0.3,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
+
